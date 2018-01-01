@@ -11,26 +11,26 @@ var del = require('del');
 var runSequence = require('run-sequence');
 var changed = require('gulp-changed');
 var nunjucksRender = require('gulp-nunjucks-render');
+var data = require('gulp-data');
 
 //Global variables
 var dirSrc = 'src\\scss src\\img src\\js src\\pages src\\templates src\\templates\\macros src\\templates\\partials';
 var dirDst = 'dst\\css dst\\img dst\\js dst\\fonts';
 var htmlSrc = 'src/pages/*.html';
 var htmlDst = 'dst/';
+var dataJson = './src/data.json';
 var sassSrc = [
-	'node_modules/bootstrap/scss',
-	'src/scss',
+	'node_modules/bootstrap/scss/**/*.scss',
+	'src/scss/**/*.css',
 ];
 var cssDst = 'dst/css';
 var jsSrc =[
-	'node_modules/bootstrap/js/dist/bootstrap.bundle.js',
-	'node_modules/bootstrap/js/dist/bootstrap.js',
-	'src/js'
+	'node_modules/bootstrap/dist/js/bootstrap.bundle.js',
+	'node_modules/bootstrap/dist/js/bootstrap.js',
+	'src/js/*.js'
 ];
-var jsDst =[
-	'dst/js'
-];
-var fontsSrc = '*';
+var jsDst = 'dst/js';
+var fontsSrc = 'node_modules/font-awesome/fonts/*.*';
 var fontsDst = 'dst/fonts';
 var imgSrc = 'src/img/**/*.+(png|jpg|gif|svg)';
 var imgDst = 'dst/img';
@@ -49,6 +49,9 @@ gulp.task('mkdir', shell.task([
 gulp.task('html', function(){
 	return gulp.src(htmlSrc)
 		.pipe(changed(htmlDst))
+		.pipe(data(function(){
+			return require(dataJson)
+		}))
 		.pipe(nunjucksRender({
 			path: ['src/templates']
 		}))
@@ -57,7 +60,7 @@ gulp.task('html', function(){
 
 // Compile sass files
 gulp.task('css', function(){
-	return gulp.src(jsSrc[2]+'**/*.scss')
+	return gulp.src(sassSrc)
 		.pipe(changed(cssDst))
 		.pipe(sass({
 			includePaths: sassSrc,
@@ -72,12 +75,15 @@ gulp.task('css', function(){
 
 // Concat js files
 gulp.task('js', function(){
-
+	return gulp.src(jsSrc)
+		.pipe(changed(jsDst))
+		.pipe(gulp.dest(jsDst));
 });
 
 // Copy fonts to dist
 gulp.task('fonts', function(){
 	return gulp.src(fontsSrc)
+		.pipe(changed(fontsDst))
 		.pipe(gulp.dest(fontsDst));
 })
 
@@ -115,7 +121,7 @@ gulp.task('clean', function(){
 
 // Gulp build
 gulp.task('build', function(callback){
-	runSequence('clean', 'mkdir', ['img', 'html', 'css'], callback);
+	runSequence('clean', ['img', 'html', 'css', 'fonts', 'js'], callback);
 });
 
 // Gulp watch
@@ -124,7 +130,7 @@ gulp.task('watch', function()
 	// Watch css
 	gulp.watch('src/scss/**/*.scss', ['css']);
 	// Watch html
-	gulp.watch('src/*.html', ['html']);
+	gulp.watch('src/**/*.html', ['html']);
 	// Watch js
 	gulp.watch('src/js/*.js', ['js']);
 });

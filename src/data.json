@@ -1,0 +1,12 @@
+{
+    "images": [
+    {
+        "src": "image-one.jpg"
+    },
+    {
+        "src": "image-two.jpg"
+    },
+    {
+    	"src": "image-three.jpg"
+    }]
+}
