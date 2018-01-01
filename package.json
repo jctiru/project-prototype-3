@@ -1,0 +1,27 @@
+{
+  "name": "project-prototype-3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "jctiru",
+  "license": "ISC",
+  "devDependencies": {
+    "bootstrap": "^4.0.0-beta.3",
+    "del": "^3.0.0",
+    "foundation-sites": "^6.4.4-rc1",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.1.0",
+    "gulp-cache": "^1.0.1",
+    "gulp-changed": "^3.1.1",
+    "gulp-imagemin": "^4.0.0",
+    "gulp-nunjucks-render": "^2.2.1",
+    "gulp-sass": "^3.1.0",
+    "gulp-shell": "^0.6.3",
+    "imagemin-mozjpeg": "^7.0.0",
+    "imagemin-pngquant": "^5.0.1",
+    "run-sequence": "^2.2.0"
+  }
+}

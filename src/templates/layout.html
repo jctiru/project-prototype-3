@@ -1,0 +1,39 @@
+<!-- layout.htmls -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>{{title}}</title>
+    <!-- block css -->
+    {%- block css %}
+        <!-- default partials/css.html -->
+    	{%- include "partials/css.html" %}
+        <!-- end default partials/css.html -->
+    {%- endblock %}
+    <!-- end block css -->
+</head>
+
+<body>
+    <!-- block navigation -->
+	{%- block navigation %}
+        <!-- default partials/navigation.html -->
+		{%- include "partials/navigation.html" %}
+        <!-- end default partial/navigation.html -->
+	{%- endblock %}
+    <!-- end block navigation -->
+    <!-- block content -->
+    {%- block content %} 
+    {%- endblock %}
+    <!-- end block content -->
+    <!-- partials/footer.html -->
+    {%- include "partials/footer.html" %}
+    <!-- end partials/footer.html -->
+    <!-- partials/scripts.html -->
+    {%- include "partials/scripts.html" %}
+    <!-- end partials/scripts/html -->
+</body>
+
+</html>

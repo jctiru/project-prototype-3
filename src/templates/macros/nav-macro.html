@@ -1,0 +1,8 @@
+{# macros/nav-macro.html #}
+{%- macro active(activePage='home') %}
+<nav>
+    {%- for i in ['home', 'about', 'contacts', 'testimonials'] %}
+        <a href="{% if activePage == i %}#{% else %}{{i}}.html{% endif %}" class="{% if activePage == i %}active{% endif %}"> {{ i | title }}</a>
+    {%- endfor %}
+</nav>
+{%- endmacro %}
