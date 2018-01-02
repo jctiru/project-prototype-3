@@ -4,24 +4,54 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Index</title>
     <!-- block css -->
         <!-- default partials/css.html -->
-<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/style.css">
         <!-- end default partials/css.html -->
     <!-- end block css -->
 </head>
 
 <body>
     <!-- block navigation -->
-<nav>
-        <a href="#" class="active"> Home</a>
-        <a href="about.html" class=""> About</a>
-        <a href="contacts.html" class=""> Contacts</a>
-        <a href="testimonials.html" class=""> Testimonials</a>
+        <!-- default partials/navigation.html -->
+<!-- <nav>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
 </nav>
+ -->
+<div id="hero">
+    <div class="container">
+        <div class="row">
+            <nav class="navbar navbar-expand-md navbar-custom-color">
+                <a href="#" class="navbar-brand" id="logo">GAMELOGO</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navContent">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navContent">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Overview</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Specs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">FAQ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Purchase</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+</div>
+        <!-- end default partial/navigation.html -->
     <!-- end block navigation -->
     <!-- block content -->
 	<h1>This is the index page</h1>
@@ -48,8 +78,9 @@
 
     <!-- end partials/footer.html -->
     <!-- partials/scripts.html -->
-<script src="bower_components/jquery/dist/jquery.js"></script>
-<script src="js/main.js"></script>
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.bundle.js"></script>
+<script src="js/bootstrap.js"></script>
 
     <!-- end partials/scripts/html -->
 </body>

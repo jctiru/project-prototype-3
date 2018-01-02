@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+// Global variables
+$green: #00ffc4;
+$primary: $green;
+$link-color: $green;
+$body-bg: #1a1b1d;
+$font-family-sans-serif: "Raleway", "Helvetica Neue", Arial, Sans-serif;
+$navbar-custom-color:                 rgba($primary, .5);
+$navbar-custom-hover-color:           rgba($primary, .75);
+$navbar-custom-active-color:          $primary;
+$navbar-custom-disabled-color:        rgba($primary, .25);
+$navbar-custom-toggler-icon-bg:       url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{$navbar-custom-color}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+$navbar-custom-toggler-border-color:  rgba($primary, .1);
+
+@import "bootstrap";
+@import "font-awesome";
+
+.navbar {
+	width: 100%;
+	background: none !important;
+	@media(max-width:34rem) {
+		background: black !important;
+	}
+}
+
+.navbar-custom-color {
+  .navbar-brand {
+    color: $navbar-custom-active-color;
+  }
+
+  .navbar-nav {
+    .nav-link {
+      color: $navbar-custom-color;
+      &.disabled {
+        color: $navbar-custom-disabled-color;
+      }
+    }
+
+    .show > .nav-link,
+    .active > .nav-link,
+    .nav-link.show,
+    .nav-link.active {
+      color: $navbar-custom-active-color;
+    }
+  }
+
+  .navbar-toggler {
+    color: $navbar-custom-color;
+    border-color: $navbar-custom-toggler-border-color;
+  }
+
+  .navbar-toggler-icon {
+    background-image: $navbar-custom-toggler-icon-bg;
+  }
+
+  .navbar-text {
+    color: $navbar-custom-color;
+    a {
+      color: $navbar-custom-active-color;
+    }
+  }
+}

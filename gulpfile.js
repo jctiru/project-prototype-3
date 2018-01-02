@@ -12,6 +12,7 @@ var runSequence = require('run-sequence');
 var changed = require('gulp-changed');
 var nunjucksRender = require('gulp-nunjucks-render');
 var data = require('gulp-data');
+var browserSync = require('browser-sync').create();
 
 //Global variables
 var dirSrc = 'src\\scss src\\img src\\js src\\pages src\\templates src\\templates\\macros src\\templates\\partials';
@@ -20,11 +21,13 @@ var htmlSrc = 'src/pages/*.html';
 var htmlDst = 'dst/';
 var dataJson = './src/data.json';
 var sassSrc = [
-	'node_modules/bootstrap/scss/**/*.scss',
-	'src/scss/**/*.css',
+	'src/scss/',
+	'node_modules/bootstrap/scss/',
+	'node_modules/font-awesome/scss/',
 ];
 var cssDst = 'dst/css';
 var jsSrc =[
+	'node_modules/jquery/dist/jquery.js',
 	'node_modules/bootstrap/dist/js/bootstrap.bundle.js',
 	'node_modules/bootstrap/dist/js/bootstrap.js',
 	'src/js/*.js'
@@ -48,20 +51,19 @@ gulp.task('mkdir', shell.task([
 // Compile html
 gulp.task('html', function(){
 	return gulp.src(htmlSrc)
-		.pipe(changed(htmlDst))
 		.pipe(data(function(){
 			return require(dataJson)
 		}))
 		.pipe(nunjucksRender({
 			path: ['src/templates']
 		}))
-		.pipe(gulp.dest(htmlDst))
+		.pipe(gulp.dest(htmlDst));
 });
 
 // Compile sass files
 gulp.task('css', function(){
-	return gulp.src(sassSrc)
-		.pipe(changed(cssDst))
+	return gulp.src(sassSrc[0]+'**/*.scss')
+		//.pipe(changed(cssDst))
 		.pipe(sass({
 			includePaths: sassSrc,
 			outputStyle: 'expanded'
@@ -119,18 +121,25 @@ gulp.task('clean', function(){
 	return del.sync('dst');
 });
 
+gulp.task('browserSync', function(){
+	browserSync.init({
+		server: {
+			baseDir: 'dst/'
+		}
+	})
+})
+
 // Gulp build
 gulp.task('build', function(callback){
-	runSequence('clean', ['img', 'html', 'css', 'fonts', 'js'], callback);
+	runSequence('clean', ['css', 'html', 'img', 'fonts', 'js'], callback);
 });
 
 // Gulp watch
-gulp.task('watch', function()
-{	
+gulp.task('watch', ['browserSync', 'css', 'html', 'js'], function(){	
 	// Watch css
-	gulp.watch('src/scss/**/*.scss', ['css']);
+	gulp.watch('src/scss/**/*.scss', ['css', browserSync.reload]);
 	// Watch html
-	gulp.watch('src/**/*.html', ['html']);
+	gulp.watch('src/**/*.html', ['html', browserSync.reload]);
 	// Watch js
-	gulp.watch('src/js/*.js', ['js']);
+	gulp.watch('src/js/*.js', ['js', browserSync.reload]);
 });
