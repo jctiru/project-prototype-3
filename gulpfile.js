@@ -96,10 +96,10 @@ gulp.task('img', function(){
 		.pipe(cache(imagemin([
 			imagemin.gifsicle({interlaced: true}),
 			imageminMozjpeg({
-				quality: 90
+				quality: 100
 			}),
 			imageminPngquant({
-				quality: 90
+				quality: 100
 			}),
 			imagemin.svgo({
 				plugins: [

@@ -12005,14 +12005,29 @@ a.text-dark:focus, a.text-dark:hover {
   clip: auto;
 }
 
+#hero {
+  background: url("../img/bg.jpg") no-repeat;
+  background-size: cover;
+  background-position: 0 60%;
+}
+
 .navbar {
   width: 100%;
-  background: none !important;
 }
 
 @media (max-width: 34rem) {
   .navbar {
-    background: black !important;
+    background: #000 !important;
+  }
+}
+
+.navbar .nav-item {
+  padding: 0 1rem;
+}
+
+@media (max-width: 34rem) {
+  .navbar .nav-item {
+    padding: 0;
   }
 }
 
@@ -12020,8 +12035,18 @@ a.text-dark:focus, a.text-dark:hover {
   color: #00ffc4;
 }
 
+.navbar-custom-color .navbar-brand:focus, .navbar-custom-color .navbar-brand:hover {
+  color: #00ffc4;
+}
+
 .navbar-custom-color .navbar-nav .nav-link {
+  text-transform: uppercase;
+  font-weight: bold;
   color: rgba(0, 255, 196, 0.5);
+}
+
+.navbar-custom-color .navbar-nav .nav-link:focus, .navbar-custom-color .navbar-nav .nav-link:hover {
+  color: rgba(0, 255, 196, 0.75);
 }
 
 .navbar-custom-color .navbar-nav .nav-link.disabled {
@@ -12038,6 +12063,7 @@ a.text-dark:focus, a.text-dark:hover {
 .navbar-custom-color .navbar-toggler {
   color: rgba(0, 255, 196, 0.5);
   border-color: rgba(0, 255, 196, 0.1);
+  outline: 0;
 }
 
 .navbar-custom-color .navbar-toggler-icon {
@@ -12049,5 +12075,9 @@ a.text-dark:focus, a.text-dark:hover {
 }
 
 .navbar-custom-color .navbar-text a {
+  color: #00ffc4;
+}
+
+.navbar-custom-color .navbar-text a:focus, .navbar-custom-color .navbar-text a:hover {
   color: #00ffc4;
 }

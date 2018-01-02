@@ -5,7 +5,9 @@ $green: #00ffc4;
 $primary: $green;
 $link-color: $green;
 $body-bg: #1a1b1d;
+//$body-color: $white !important;
 $font-family-sans-serif: "Raleway", "Helvetica Neue", Arial, Sans-serif;
+// Navbar variables
 $navbar-custom-color:                 rgba($primary, .5);
 $navbar-custom-hover-color:           rgba($primary, .75);
 $navbar-custom-active-color:          $primary;
@@ -16,22 +18,48 @@ $navbar-custom-toggler-border-color:  rgba($primary, .1);
 @import "bootstrap";
 @import "font-awesome";
 
+// body{
+// 	color: $gray-100;
+// }
+
+#hero {
+	background: url('../img/bg.jpg') no-repeat;
+	background-size: cover;
+	background-position: 0 60%;
+}
+
+// Navbar
 .navbar {
 	width: 100%;
-	background: none !important;
 	@media(max-width:34rem) {
-		background: black !important;
+		background: $black !important;
+	}
+
+	.nav-item{
+		padding: 0 1rem;
+
+		@media(max-width:34rem){
+			padding: 0;
+		}
 	}
 }
 
 .navbar-custom-color {
   .navbar-brand {
     color: $navbar-custom-active-color;
+    @include hover-focus {
+      color: $navbar-custom-active-color;
+    }
   }
 
   .navbar-nav {
     .nav-link {
+      text-transform: uppercase;
+      font-weight: bold;
       color: $navbar-custom-color;
+      @include hover-focus {
+        color: $navbar-custom-hover-color;
+      }
       &.disabled {
         color: $navbar-custom-disabled-color;
       }
@@ -48,6 +76,7 @@ $navbar-custom-toggler-border-color:  rgba($primary, .1);
   .navbar-toggler {
     color: $navbar-custom-color;
     border-color: $navbar-custom-toggler-border-color;
+    outline: 0;
   }
 
   .navbar-toggler-icon {
@@ -58,6 +87,9 @@ $navbar-custom-toggler-border-color:  rgba($primary, .1);
     color: $navbar-custom-color;
     a {
       color: $navbar-custom-active-color;
+      @include hover-focus {
+        color: $navbar-custom-active-color;
+      }      
     }
   }
 }
