@@ -1,5 +1,4 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css?family=Raleway");
 /*!
  * Bootstrap v4.0.0-beta.3 (https://getbootstrap.com)
  * Copyright 2011-2017 The Bootstrap Authors
@@ -33,7 +32,7 @@
   --breakpoint-md: 768px;
   --breakpoint-lg: 992px;
   --breakpoint-xl: 1200px;
-  --font-family-sans-serif: "Raleway", "Helvetica Neue", Arial, Sans-serif;
+  --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
@@ -63,7 +62,7 @@ article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, s
 
 body {
   margin: 0;
-  font-family: "Raleway", "Helvetica Neue", Arial, Sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -5569,7 +5568,7 @@ button.close {
   z-index: 1070;
   display: block;
   margin: 0;
-  font-family: "Raleway", "Helvetica Neue", Arial, Sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -5682,7 +5681,7 @@ button.close {
   z-index: 1060;
   display: block;
   max-width: 276px;
-  font-family: "Raleway", "Helvetica Neue", Arial, Sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -7539,6 +7538,30 @@ button.bg-dark:hover {
   margin-left: 3rem !important;
 }
 
+.m-6 {
+  margin: 9rem !important;
+}
+
+.mt-6,
+.my-6 {
+  margin-top: 9rem !important;
+}
+
+.mr-6,
+.mx-6 {
+  margin-right: 9rem !important;
+}
+
+.mb-6,
+.my-6 {
+  margin-bottom: 9rem !important;
+}
+
+.ml-6,
+.mx-6 {
+  margin-left: 9rem !important;
+}
+
 .p-0 {
   padding: 0 !important;
 }
@@ -7683,6 +7706,30 @@ button.bg-dark:hover {
   padding-left: 3rem !important;
 }
 
+.p-6 {
+  padding: 9rem !important;
+}
+
+.pt-6,
+.py-6 {
+  padding-top: 9rem !important;
+}
+
+.pr-6,
+.px-6 {
+  padding-right: 9rem !important;
+}
+
+.pb-6,
+.py-6 {
+  padding-bottom: 9rem !important;
+}
+
+.pl-6,
+.px-6 {
+  padding-left: 9rem !important;
+}
+
 .m-auto {
   margin: auto !important;
 }
@@ -7822,6 +7869,25 @@ button.bg-dark:hover {
   .mx-sm-5 {
     margin-left: 3rem !important;
   }
+  .m-sm-6 {
+    margin: 9rem !important;
+  }
+  .mt-sm-6,
+  .my-sm-6 {
+    margin-top: 9rem !important;
+  }
+  .mr-sm-6,
+  .mx-sm-6 {
+    margin-right: 9rem !important;
+  }
+  .mb-sm-6,
+  .my-sm-6 {
+    margin-bottom: 9rem !important;
+  }
+  .ml-sm-6,
+  .mx-sm-6 {
+    margin-left: 9rem !important;
+  }
   .p-sm-0 {
     padding: 0 !important;
   }
@@ -7935,6 +8001,25 @@ button.bg-dark:hover {
   .pl-sm-5,
   .px-sm-5 {
     padding-left: 3rem !important;
+  }
+  .p-sm-6 {
+    padding: 9rem !important;
+  }
+  .pt-sm-6,
+  .py-sm-6 {
+    padding-top: 9rem !important;
+  }
+  .pr-sm-6,
+  .px-sm-6 {
+    padding-right: 9rem !important;
+  }
+  .pb-sm-6,
+  .py-sm-6 {
+    padding-bottom: 9rem !important;
+  }
+  .pl-sm-6,
+  .px-sm-6 {
+    padding-left: 9rem !important;
   }
   .m-sm-auto {
     margin: auto !important;
@@ -8072,6 +8157,25 @@ button.bg-dark:hover {
   .mx-md-5 {
     margin-left: 3rem !important;
   }
+  .m-md-6 {
+    margin: 9rem !important;
+  }
+  .mt-md-6,
+  .my-md-6 {
+    margin-top: 9rem !important;
+  }
+  .mr-md-6,
+  .mx-md-6 {
+    margin-right: 9rem !important;
+  }
+  .mb-md-6,
+  .my-md-6 {
+    margin-bottom: 9rem !important;
+  }
+  .ml-md-6,
+  .mx-md-6 {
+    margin-left: 9rem !important;
+  }
   .p-md-0 {
     padding: 0 !important;
   }
@@ -8185,6 +8289,25 @@ button.bg-dark:hover {
   .pl-md-5,
   .px-md-5 {
     padding-left: 3rem !important;
+  }
+  .p-md-6 {
+    padding: 9rem !important;
+  }
+  .pt-md-6,
+  .py-md-6 {
+    padding-top: 9rem !important;
+  }
+  .pr-md-6,
+  .px-md-6 {
+    padding-right: 9rem !important;
+  }
+  .pb-md-6,
+  .py-md-6 {
+    padding-bottom: 9rem !important;
+  }
+  .pl-md-6,
+  .px-md-6 {
+    padding-left: 9rem !important;
   }
   .m-md-auto {
     margin: auto !important;
@@ -8322,6 +8445,25 @@ button.bg-dark:hover {
   .mx-lg-5 {
     margin-left: 3rem !important;
   }
+  .m-lg-6 {
+    margin: 9rem !important;
+  }
+  .mt-lg-6,
+  .my-lg-6 {
+    margin-top: 9rem !important;
+  }
+  .mr-lg-6,
+  .mx-lg-6 {
+    margin-right: 9rem !important;
+  }
+  .mb-lg-6,
+  .my-lg-6 {
+    margin-bottom: 9rem !important;
+  }
+  .ml-lg-6,
+  .mx-lg-6 {
+    margin-left: 9rem !important;
+  }
   .p-lg-0 {
     padding: 0 !important;
   }
@@ -8435,6 +8577,25 @@ button.bg-dark:hover {
   .pl-lg-5,
   .px-lg-5 {
     padding-left: 3rem !important;
+  }
+  .p-lg-6 {
+    padding: 9rem !important;
+  }
+  .pt-lg-6,
+  .py-lg-6 {
+    padding-top: 9rem !important;
+  }
+  .pr-lg-6,
+  .px-lg-6 {
+    padding-right: 9rem !important;
+  }
+  .pb-lg-6,
+  .py-lg-6 {
+    padding-bottom: 9rem !important;
+  }
+  .pl-lg-6,
+  .px-lg-6 {
+    padding-left: 9rem !important;
   }
   .m-lg-auto {
     margin: auto !important;
@@ -8572,6 +8733,25 @@ button.bg-dark:hover {
   .mx-xl-5 {
     margin-left: 3rem !important;
   }
+  .m-xl-6 {
+    margin: 9rem !important;
+  }
+  .mt-xl-6,
+  .my-xl-6 {
+    margin-top: 9rem !important;
+  }
+  .mr-xl-6,
+  .mx-xl-6 {
+    margin-right: 9rem !important;
+  }
+  .mb-xl-6,
+  .my-xl-6 {
+    margin-bottom: 9rem !important;
+  }
+  .ml-xl-6,
+  .mx-xl-6 {
+    margin-left: 9rem !important;
+  }
   .p-xl-0 {
     padding: 0 !important;
   }
@@ -8685,6 +8865,25 @@ button.bg-dark:hover {
   .pl-xl-5,
   .px-xl-5 {
     padding-left: 3rem !important;
+  }
+  .p-xl-6 {
+    padding: 9rem !important;
+  }
+  .pt-xl-6,
+  .py-xl-6 {
+    padding-top: 9rem !important;
+  }
+  .pr-xl-6,
+  .px-xl-6 {
+    padding-right: 9rem !important;
+  }
+  .pb-xl-6,
+  .py-xl-6 {
+    padding-bottom: 9rem !important;
+  }
+  .pl-xl-6,
+  .px-xl-6 {
+    padding-left: 9rem !important;
   }
   .m-xl-auto {
     margin: auto !important;
@@ -12005,6 +12204,10 @@ a.text-dark:focus, a.text-dark:hover {
   clip: auto;
 }
 
+body {
+  color: #fff;
+}
+
 #hero {
   background: url("../img/bg.jpg") no-repeat;
   background-size: cover;
@@ -12080,4 +12283,38 @@ a.text-dark:focus, a.text-dark:hover {
 
 .navbar-custom-color .navbar-text a:focus, .navbar-custom-color .navbar-text a:hover {
   color: #00ffc4;
+}
+
+h1 {
+  font-weight: bold !important;
+  font-size: 3rem;
+}
+
+.hero-img {
+  width: 80%;
+}
+
+.feature-wrapper {
+  color: #000;
+}
+
+#join-container {
+  background: url("../img/screen1.jpg") no-repeat;
+  background-size: cover;
+}
+
+#join-container h2 {
+  letter-spacing: 4px;
+  font-weight: bold !important;
+}
+
+#join-container .form-control {
+  background: #111;
+  border: 3px solid #2f2f2f;
+  padding: 10px;
+}
+
+#join-container .btn {
+  padding: 12px;
+  border: none;
 }

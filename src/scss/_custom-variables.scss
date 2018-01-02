@@ -1,0 +1,24 @@
+// Global variables
+$green: #00ffc4;
+$primary: $green;
+$link-color: $green;
+$body-bg: #1a1b1d;
+//$font-family-sans-serif: "Raleway", Roboto, "Helvetica Neue", Arial, Sans-serif !important;
+// Navbar variables
+$navbar-custom-color:                 rgba($primary, .5);
+$navbar-custom-hover-color:           rgba($primary, .75);
+$navbar-custom-active-color:          $primary;
+$navbar-custom-disabled-color:        rgba($primary, .25);
+$navbar-custom-toggler-icon-bg:       url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{$navbar-custom-color}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+$navbar-custom-toggler-border-color:  rgba($primary, .1);
+// Spacing
+$spacer: 1rem !default;
+$spacers: (
+  0: 0,
+  1: ($spacer * .25),
+  2: ($spacer * .5),
+  3: $spacer,
+  4: ($spacer * 1.5),
+  5: ($spacer * 3),
+  6: ($spacer * 9)
+);

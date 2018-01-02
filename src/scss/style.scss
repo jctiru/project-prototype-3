@@ -1,95 +1,109 @@
-@import url('https://fonts.googleapis.com/css?family=Raleway');
-
-// Global variables
-$green: #00ffc4;
-$primary: $green;
-$link-color: $green;
-$body-bg: #1a1b1d;
-//$body-color: $white !important;
-$font-family-sans-serif: "Raleway", "Helvetica Neue", Arial, Sans-serif;
-// Navbar variables
-$navbar-custom-color:                 rgba($primary, .5);
-$navbar-custom-hover-color:           rgba($primary, .75);
-$navbar-custom-active-color:          $primary;
-$navbar-custom-disabled-color:        rgba($primary, .25);
-$navbar-custom-toggler-icon-bg:       url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{$navbar-custom-color}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
-$navbar-custom-toggler-border-color:  rgba($primary, .1);
-
+@import "_custom-variables";
 @import "bootstrap";
 @import "font-awesome";
-
-// body{
-// 	color: $gray-100;
-// }
+//@import url('https://fonts.googleapis.com/css?family=Raleway');
+body {
+    color: $white;
+}
 
 #hero {
-	background: url('../img/bg.jpg') no-repeat;
-	background-size: cover;
-	background-position: 0 60%;
+    background: url('../img/bg.jpg') no-repeat;
+    background-size: cover;
+    background-position: 0 60%;
 }
 
 // Navbar
 .navbar {
-	width: 100%;
-	@media(max-width:34rem) {
-		background: $black !important;
-	}
+    width: 100%;
+    @media(max-width: 34rem) {
+        background: $black !important;
+    }
+    .nav-item {
+        padding: 0 1rem;
 
-	.nav-item{
-		padding: 0 1rem;
-
-		@media(max-width:34rem){
-			padding: 0;
-		}
-	}
+        @media(max-width: 34rem) {
+            padding: 0;
+        }
+    }
 }
 
 .navbar-custom-color {
-  .navbar-brand {
-    color: $navbar-custom-active-color;
-    @include hover-focus {
-      color: $navbar-custom-active-color;
-    }
-  }
-
-  .navbar-nav {
-    .nav-link {
-      text-transform: uppercase;
-      font-weight: bold;
-      color: $navbar-custom-color;
-      @include hover-focus {
-        color: $navbar-custom-hover-color;
-      }
-      &.disabled {
-        color: $navbar-custom-disabled-color;
-      }
-    }
-
-    .show > .nav-link,
-    .active > .nav-link,
-    .nav-link.show,
-    .nav-link.active {
-      color: $navbar-custom-active-color;
-    }
-  }
-
-  .navbar-toggler {
-    color: $navbar-custom-color;
-    border-color: $navbar-custom-toggler-border-color;
-    outline: 0;
-  }
-
-  .navbar-toggler-icon {
-    background-image: $navbar-custom-toggler-icon-bg;
-  }
-
-  .navbar-text {
-    color: $navbar-custom-color;
-    a {
-      color: $navbar-custom-active-color;
-      @include hover-focus {
+    .navbar-brand {
         color: $navbar-custom-active-color;
-      }      
+        @include hover-focus {
+            color: $navbar-custom-active-color;
+        }
     }
-  }
+    .navbar-nav {
+        .nav-link {
+            text-transform: uppercase;
+            font-weight: bold;
+            color: $navbar-custom-color;
+            @include hover-focus {
+                color: $navbar-custom-hover-color;
+            }
+            &.disabled {
+                color: $navbar-custom-disabled-color;
+            }
+        }
+
+        .show>.nav-link,
+        .active>.nav-link,
+        .nav-link.show,
+        .nav-link.active {
+            color: $navbar-custom-active-color;
+        }
+    }
+    .navbar-toggler {
+        color: $navbar-custom-color;
+        border-color: $navbar-custom-toggler-border-color;
+        outline: 0;
+    }
+
+    .navbar-toggler-icon {
+        background-image: $navbar-custom-toggler-icon-bg;
+    }
+
+    .navbar-text {
+        color: $navbar-custom-color;
+        a {
+            color: $navbar-custom-active-color;
+            @include hover-focus {
+                color: $navbar-custom-active-color;
+            }
+        }
+    }
+}
+
+h1 {
+    font-weight: bold !important;
+    font-size: $font-size-base * 3;
+}
+
+.hero-img {
+    width: 80%;
+}
+
+.feature-wrapper {
+    color: $black;
+}
+
+#join-container {
+    background: url('../img/screen1.jpg') no-repeat;
+    background-size: cover;
+    h2 {
+      letter-spacing: 4px;
+      font-weight: bold !important;
+    }
+
+    .form-control {
+      background: #111;
+      border: 3px solid #2f2f2f;
+      padding: 10px;
+    } 
+
+    .btn {
+      padding: 12px;
+      border: none;
+    }  
 }

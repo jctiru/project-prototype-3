@@ -6,16 +6,49 @@
 	{{- nav.active('home')}}
 {%- endblock %}   #}
 {%- block content %}
-	<h1>This is the index page</h1>
-	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-	{%- for image in images %}
+	<div class="feature-wrapper bg-primary pt-5 pb-5 mt-5 mt-lg-0">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12 col-md-1 text-center mb-3 mb-md-0">
+					<i class="fa fa-gamepad fa-3x"></i>
+				</div>
+				<div class="col-sm-12 col-md-3 text-center text-uppercase text-md-left mb-3 mb-md-0">
+					<p>Play in an immersive enverionment with your friends.</p>
+				</div>
+				<div class="col-sm-12 col-md-1 text-center mb-3 mb-md-0">
+					<i class="fa fa-sitemap fa-3x"></i>
+				</div>
+				<div class="col-sm-12 col-md-3 text-center text-uppercase text-md-left mb-3 mb-md-0">
+					<p>Play offline or online with our state of the art net system.</p>
+				</div>
+				<div class="col-sm-12 col-md-1 text-center mb-3 mb-md-0">
+					<i class="fa fa-line-chart fa-3x"></i>
+				</div>
+				<div class="col-sm-12 col-md-3 text-center text-uppercase text-md-left mb-3 mb-md-0">
+					<p>Web-based player tracking system for keeping tally of your stats.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="join-container" class="pt-lg-6 pb-lg-6 pt-5">
+		<div class="container text-center">
+			<h2 class="text-uppercase">Give us your email!</h2>
+			<h4 class="text-uppercase text-muted">We'll give you awesome stuff like beta invites and discounts</h4>
+			<form>
+				<div class="form-group row pt-lg-5 pb-lg-5 pt-5">
+					<div class="col-sm-12 col-md-5 offset-md-2">
+						<input type="email" class="form-control mb-4" id="email" placeholder="Enter email" name="">
+					</div>
+					<div class="col-sm-12 col-md-3">
+						<button type="submit" class="btn btn-primary btn-block text-uppercase bg-primary">Okay!</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+	<!-- {%- for image in images %}
 		<div class="gallery-item">
 			<img src="{{image.src}}">
 		</div>
-	{%- endfor %}
+	{%- endfor %} -->
 {%- endblock %}
