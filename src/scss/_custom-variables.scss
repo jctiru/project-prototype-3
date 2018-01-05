@@ -1,4 +1,5 @@
 // Global variables
+// Bootstrap
 $green: #00ffc4;
 $primary: $green;
 $link-color: $green;
@@ -22,3 +23,21 @@ $spacers: (
   5: ($spacer * 3),
   6: ($spacer * 9)
 );
+$card-bg: #343a40;
+
+
+
+
+
+// Faded images https://codepen.io/burtclan/pen/mLqxC
+$faded-offset: 40px !default;
+$faded-blur-radius: 40px !default;
+$faded-spread-radius: 16px !default;
+
+$faded-narrow-offset: 20px !default;
+$faded-narrow-blur-radius: 20px !default;
+$faded-narrow-spread-radius: 10px !default;
+
+$faded-wide-offset: 80px !default;
+$faded-wide-blur-radius: 80px !default;
+$faded-wide-spread-radius: 28px !default;

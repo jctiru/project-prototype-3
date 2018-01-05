@@ -15,7 +15,7 @@ var data = require('gulp-data');
 var browserSync = require('browser-sync').create();
 
 //Global variables
-var dirSrc = 'src\\scss src\\img src\\js src\\pages src\\templates src\\templates\\macros src\\templates\\partials';
+var dirSrc = 'src\\scss src\\img src\\js src\\pages src\\js src\\templates src\\templates\\macros src\\templates\\partials';
 var dirDst = 'dst\\css dst\\img dst\\js dst\\fonts';
 var htmlSrc = 'src/pages/*.html';
 var htmlDst = 'dst/';
