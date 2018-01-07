@@ -17,38 +17,37 @@
 <body>
     <!-- block navigation -->
         <!-- default partials/navigation.html -->
-<div class="container">
-    <div class="row">
-        <nav class="navbar navbar-expand-md navbar-custom-color">
-            <a href="#" class="navbar-brand" id="logo">GAMELOGO</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navContent">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-end" id="navContent">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Overview</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Specs</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">FAQ</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Purchase</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+<nav class="navbar navbar-expand-md navbar-custom-color fixed-top">
+    <div class="container">
+        <a href="#" class="navbar-brand" id="logo"><img src="img/gamelogo.png" height="35">GAMELOGO</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navContent">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navContent">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Overview</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Specs</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">FAQ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Purchase</a>
+                </li>
+            </ul>
+        </div>
+        
     </div>
-</div>
+</nav>
         <!-- end default partial/navigation.html -->
     <!-- end block navigation -->
     <!-- block content -->
 <div class="container mt-md-5 mb-md-5">
     <div class="row">
-        <div class="col-md-4 mt-md-3 mb-md-3 mb-xs-5">
+        <div class="col-md-4 mt-md-3 mb-md-3">
             <div class="card mb-xs-5 mt-xs-5">
                 <img class="card-img-top" src="img/game-logo.png" alt="Card image cap">
                 <div class="card-body">
@@ -113,7 +112,7 @@
     <!-- end block content -->
     <!-- partials/footer.html -->
     <footer>
-    	<div class="container mt-sm-3 mb-sm-3">
+    	<div class="container pt-3 pb-3">
 	        <div class="row">
 	            <div class="col-md-3">
 	                <p>GameLogo &copy; Copyright 2017</p>
@@ -138,7 +137,7 @@
 	                </ul>
 	            </div>
 	            <div class="col-md-3">
-	                <span class="faded faded-all faded-narrow"><img class="img-fluid game-logo" src="img/game-logo2.png"></span>
+	                <img class="img-fluid game-logo" src="img/gamelogo.png">
 	            </div>
 	        </div>
     	</div>

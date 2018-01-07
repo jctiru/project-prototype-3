@@ -10,15 +10,17 @@ body {
 #hero {
     background: url('../img/bg.jpg') no-repeat;
     background-size: cover;
-    background-position: 0 60%;
+    // background-position: 0 60%;
+    background-position: center;
+
 }
 
 // Navbar
 .navbar {
+    border-bottom: $primary 3px solid;
+    opacity: 0.8;
     width: 100%;
-    @media(max-width: 34rem) {
-        background: $black !important;
-    }
+    background: $black !important;
     .nav-item {
         padding: 0 1rem;
 
